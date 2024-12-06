@@ -1,0 +1,20 @@
+vite   npm create vite@latest
+npm install  react     react dom
+change directory
+npm run dev   we can chanr the dev to any name in json file go to sctipt change
+
+cra npx creat_react-app aooname
+npm Start
+
+parcel   npm init 
+npm install react
+npm install react-dom
+npm install parcel
+
+
+
+hooks  it is a functional component that are used to 
+ 1 use state
+
+
+
