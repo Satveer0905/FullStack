@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,4 +32,39 @@
         root.render(container);
     </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React - CDN</title>
+</head>
+<body>
+    <div id="parent"></div>
+    
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+        const parent = document.getElementById("parent");
+        const root = ReactDOM.createRoot(parent);
+
+        // Corrected JSX syntax
+        const h1 = <h1>React CDN</h1>; // Fixed closing tag
+        const item1 = <li>Item 1</li>; // Fixed closing tag
+        const item2 = <li>Item 2</li>; // Fixed closing tag
+        
+        // Corrected reference to item2
+        const list = <ul>{item1}{item2}</ul>;
+
+        // Create a container for the header and the list
+        const container = <div>{h1}{list}</div>;
+
+        // Render the container
+        root.render(container);
+    </script>
+</body>
+>>>>>>> 554bbb8 (FSD)
 </html>

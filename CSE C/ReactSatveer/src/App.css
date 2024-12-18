@@ -1,10 +1,31 @@
+<<<<<<< HEAD
 .app{
+=======
+/* .app{
+>>>>>>> 554bbb8 (FSD)
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap:20px;
+<<<<<<< HEAD
   /* border: 2px solid blueviolet; */
   height: 355px;
   
 }
+=======
+  /* border: 2px solid blueviolet; 
+  height: 355px;
+  
+} */
+/* .app{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap:40px; */
+  
+  /* border: 2px solid red;
+  height: 300px; */
+
+>>>>>>> 554bbb8 (FSD)

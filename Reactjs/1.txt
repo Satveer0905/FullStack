@@ -1,3 +1,4 @@
+<<<<<<< HEAD
    
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
@@ -91,3 +92,81 @@ how to run
     Vite(Esbuild)
 
     reconsilation proce  diffing algorithm   fiber algorithm
+=======
+   
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script>
+        const parent = document.getElementById("parent");
+        const root = ReactDOM.createRoot(parent);
+        const h1=<h1>React CDN <h1
+
+
+        /* Corrected the React.createElement syntax
+        const h1 = React.createElement("h1",{}, "Hello from React CDN");
+
+        // Render the h1 element
+        //root.render(h1);
+
+        const item1=React.createElement("li",{},"React");
+        const item2=React.createElement("li",{},"CDN");
+        const list=React.createElement("ul",{},item1,item2);
+        root.render([h1,list]); */
+    </script>
+
+    <!-- <script>
+        const parent = document.getElementById("parent");
+
+        // Corrected the creation of the h1 element
+        const h1 = document.createElement("h1");
+        h1.textContent = "Hello from React CDN"; // Fixed the variable name to h1
+        parent.appendChild(h1);
+
+        const ul = document.createElement("ul");
+
+        // Corrected the creation of li elements
+        const li1 = document.createElement("li"); // Changed from li1 to li
+        li1.textContent = "Item 1";
+
+        const li2 = document.createElement("li"); // Changed from li2 to li
+        li2.textContent = "Item 2";
+
+        ul.appendChild(li1);
+        ul.appendChild(li2);
+        parent.appendChild(ul);
+    </script> -->
+
+
+    <!-- <script>
+        const parent = document.getElementById("parent");
+
+        // Corrected the creation of the h1 element
+        const h1 = document.createElement("h1");
+        h1.textContent = "Hello from React CDN"; // Fixed the variable name to h1
+        parent.appendChild(h1);
+
+        const ul = document.createElement("ul");
+
+        // Corrected the creation of li elements
+        const li1 = document.createElement("li"); // Changed from li1 to li
+        li1.textContent = "Item 1";
+
+        const li2 = document.createElement("li"); // Changed from li2 to li
+        li2.textContent = "Item 2";
+
+        ul.appendChild(li1);
+        ul.appendChild(li2);
+        parent.appendChild(ul);
+    </script> -->
+
+
+how to run 
+1 -CDN ==>content delivery network
+2 Bundlee
+    CRA(Webpack)
+    Parcel
+    Vite(Esbuild)
+
+    reconsilation proce  diffing algorithm   fiber algorithm
+>>>>>>> 554bbb8 (FSD)
