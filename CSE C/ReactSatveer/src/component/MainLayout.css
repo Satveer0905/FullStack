@@ -1,0 +1,13 @@
+.aa{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-around;
+}
+li{
+    list-style-type:none ;
+    font-size: 30px;
+}
+a{
+    text-decoration: none;
+    color: blueviolet;
+}

@@ -1,0 +1,41 @@
+.navbar {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+}
+
+.nav-tabs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-tabs li {
+  margin-right: 20px;
+}
+
+.nav-tabs a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-tabs a.active {
+  color: #337ab7;
+  border-bottom: 2px solid #337ab7;
+}
+
+.tab-content {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-top: none;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
