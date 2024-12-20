@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
    
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
@@ -93,6 +94,8 @@ how to run
 
     reconsilation proce  diffing algorithm   fiber algorithm
 =======
+=======
+>>>>>>> 554bbb8531d811ede5257d8f038da19761f3932e
    
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
@@ -169,4 +172,7 @@ how to run
     Vite(Esbuild)
 
     reconsilation proce  diffing algorithm   fiber algorithm
+<<<<<<< HEAD
 >>>>>>> 554bbb8 (FSD)
+=======
+>>>>>>> 554bbb8531d811ede5257d8f038da19761f3932e

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 
 function Colorchange() {
@@ -17,6 +18,8 @@ function Colorchange() {
 }
 export default Colorchange;
 =======
+=======
+>>>>>>> 554bbb8531d811ede5257d8f038da19761f3932e
 import React, { useState } from 'react';
 
 function Colorchange() {
@@ -34,4 +37,7 @@ function Colorchange() {
   )
 }
 export default Colorchange;
+<<<<<<< HEAD
 >>>>>>> 554bbb8 (FSD)
+=======
+>>>>>>> 554bbb8531d811ede5257d8f038da19761f3932e

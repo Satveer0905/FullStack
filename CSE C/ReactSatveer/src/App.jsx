@@ -1,5 +1,6 @@
 import './App.css'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Card from "./component/Card"
 import State3 from './component/State3'
 import pic from "./images/1.jpg"
@@ -10,6 +11,8 @@ function App() {
     
     {/* <Card name ="Satveer Singh"
 =======
+=======
+>>>>>>> 554bbb8531d811ede5257d8f038da19761f3932e
 // import Card from "./component/Card"
 // import State3 from './component/State3'
 // import pic from "./images/1.jpg"
@@ -29,15 +32,21 @@ function App() {
   <div>{JSON.stringify(store)}
 
         {/* <Card name ="Satveer Singh"
+<<<<<<< HEAD
 >>>>>>> 554bbb8 (FSD)
+=======
+>>>>>>> 554bbb8531d811ede5257d8f038da19761f3932e
     roll= "9012" img={pic} />
     <Card/>
     <Card/>
     <State3/> */}
     {/* <Colorchange/> */}
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Rotateimage/>
 =======
+=======
+>>>>>>> 554bbb8531d811ede5257d8f038da19761f3932e
     {/* <Rotateimage/> */}
       
 
@@ -54,7 +63,10 @@ function App() {
     <Route path="/dash" element={<Dashboard/>} />
     </Routes>
     </BrowserRouter>
+<<<<<<< HEAD
 >>>>>>> 554bbb8 (FSD)
+=======
+>>>>>>> 554bbb8531d811ede5257d8f038da19761f3932e
   </div>
   )
 }   

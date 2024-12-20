@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 vite   npm create vite@latest
 npm install  react     react dom
 change directory
@@ -20,6 +21,8 @@ hooks  it is a functional component that are used to
 
 
 =======
+=======
+>>>>>>> 554bbb8531d811ede5257d8f038da19761f3932e
 vite   npm create vite@latest
 npm install  react     react dom
 change directory
@@ -40,4 +43,7 @@ hooks  it is a functional component that are used to
 
 
 
+<<<<<<< HEAD
 >>>>>>> 554bbb8 (FSD)
+=======
+>>>>>>> 554bbb8531d811ede5257d8f038da19761f3932e
