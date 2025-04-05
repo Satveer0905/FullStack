@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Example</title>
+    <style>
+        /* Basic styling */
+        #dashboard {
+            display: none;
+        }
+        #loginButton {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        #logoutButton {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="loginPanel">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required><br><br>
+            <input type="password" id="password" placeholder="Password" required><br><br>
+            <span class="error" id="errorMessage"></span><br>
+            <button type="button" id="loginButton">Login</button>
+        </form>
+    </div>
+
+    <div id="dashboard">
+        <h2>Dashboard</h2>
+        <p>Welcome, Satveer0905</p>
+        <button id="fetchButton">Fetch Top 10 GitHub Users</button>
+        <select id="sortDropdown">
+            <option value="default">Default</option>
+            <!-- Additional sorting options here -->
+        </select>
+        <ul id="userList">
+            <!-- User list will populate here -->
+        </ul>
+        <button id="logoutButton">Logout</button>
+    </div>
+
+    <script>
+        document.getElementById("loginButton").addEventListener("click", function() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const errorMessage = document.getElementById("errorMessage");
+
+            // Basic validation
+            if (username === "" || password ==="") {
+                errorMessage.textContent = "Username and password are required.";
+            } else {
+                // Clear any previous error message
+                errorMessage.textContent = "";
+
+                // Hide login panel and show dashboard
+                document.getElementById("loginPanel").style.display = "none";
+                document.getElementById("dashboard").style.display = "block";
+            }
+        });
+
+        document.getElementById("logoutButton").addEventListener("click", function() {
+            // Hide dashboard and show login panel
+            document.getElementById("dashboard").style.display = "none";
+            document.getElementById("loginPanel").style.display = "block";
+        });
+
+        const url = 'https://api.github.com/users';
+
+        // Function to fetch user data
+        function fetchUserData() {
+            fetch(url)
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then((data) => {
+                    updateHTML(data);
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    document.getElementById('userList').innerHTML = 'Error fetching data.';
+                });
+        }
+
+        // Function to update the HTML content with the fetched data
+        function updateHTML(users) {
+            const userList = document.getElementById('userList');
+            userList.innerHTML = ''; // Clear existing data
+
+            // Iterate over the users and create list items for each
+            users.slice(0, 10).forEach((user) => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `
+
+                    <p><strong>Username:</strong> ${user.login}</p>
+                    
+                `;
+                userList.appendChild(listItem);
+            });
+        }
+
+        // Add event listener to fetch data when button is clicked
+        document.getElementById('fetchButton').addEventListener('click', fetchUserData);
+    </script>
+</body>
+</html>

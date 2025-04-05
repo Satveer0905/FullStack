@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub User Data</title>
+    <style>
+        #user-data img {
+            border-radius: 50%;
+            width: 100px; /* Set the width of the profile image */
+            height: 100px; /* Set the height of the profile image */
+        }
+    </style>
+</head>
+<body>
+    <h1>GitHub User Profile</h1>
+    <!-- Button to fetch user data -->
+    <button id="fetch-button">Fetch User Data</button>
+    <!-- This is where we will display the user data -->
+    <div id="user-data"></div>
+
+    <script>
+        // URL of the GitHub API endpoint for a specific user
+        const url = 'https://api.github.com/users/Satveer0905';
+        
+        // Function to fetch user data
+        function fetchUser Data() { // Corrected function name
+            // Fetch data from the API
+            fetch(url)
+                .then((response) => {
+                    // Check if the response is okay
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    // Parse the response data as JSON
+                    return response.json();
+                })
+                .then((data) => {
+                    // Call the function to update the HTML with the fetched data
+                    updateHTML(data);
+                })
+                .catch((error) => {
+                    // Log any errors to the console
+                    console.error('Error:', error);
+                    document.getElementById('user-data').innerHTML = 'Error fetching data.';
+                });
+        }
+        
+        // Function to update the HTML content with the fetched data
+        function updateHTML(data) {
+            // Get the HTML element where we want to display the data
+            const userDataElement = document.getElementById('user-data');
+        
+            // Create a string to store the HTML content
+            let htmlContent = `
+                <img src="${data.avatar_url}" alt="${data.name}'s photo">
+                <h2>${data.name}</h2>
+                <p><strong>Username:</strong> ${data.login}</p>
+                <p><strong>Location:</strong> ${data.location || 'Not specified'}</p>
+                <p><strong>Followers:</strong> ${data.followers}</p>
+                <p><strong>Following:</strong> ${data.following}</p>
+            `;
+        
+            // Update the HTML content of the element
+            userDataElement.innerHTML = htmlContent;
+        }
+        
+        // Add an event listener to the button to fetch user data when clicked
+        document.getElementById('fetch-button').addEventListener('click', fetchUser Data); // Corrected function name
+    </script>
+</body>
+</html>

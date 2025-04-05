@@ -1,6 +1,6 @@
 import './App.css'
-<<<<<<< HEAD
-<<<<<<< HEAD
+// <<<<<<< HEAD
+// <<<<<<< HEAD
 import Card from "./component/Card"
 import State3 from './component/State3'
 import pic from "./images/1.jpg"
@@ -41,12 +41,12 @@ function App() {
     <Card/>
     <State3/> */}
     {/* <Colorchange/> */}
-<<<<<<< HEAD
+{/* <<<<<<< HEAD
 <<<<<<< HEAD
     <Rotateimage/>
 =======
 =======
->>>>>>> 554bbb8531d811ede5257d8f038da19761f3932e
+>>>>>>> 554bbb8531d811ede5257d8f038da19761f3932e */}
     {/* <Rotateimage/> */}
       
 
@@ -63,10 +63,10 @@ function App() {
     <Route path="/dash" element={<Dashboard/>} />
     </Routes>
     </BrowserRouter>
-<<<<<<< HEAD
+{/* <<<<<<< HEAD
 >>>>>>> 554bbb8 (FSD)
 =======
->>>>>>> 554bbb8531d811ede5257d8f038da19761f3932e
+>>>>>>> 554bbb8531d811ede5257d8f038da19761f3932e */}
   </div>
   )
 }   

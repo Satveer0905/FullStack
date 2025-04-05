@@ -1,0 +1,21 @@
+
+[
+    {
+        "name":"raj",
+        "roll":2312,
+        "branch":"CSE",
+        "college":"ABES"
+    },
+    {
+        "name":"avy",
+        "roll":123,
+        "branch":"CS",
+        "college":"ABES"
+    },
+    {
+        "name":"lavy",
+        "roll":4212,
+        "branch":"EN",
+        "college":"ABES"
+    }
+]

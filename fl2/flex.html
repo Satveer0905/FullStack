@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+         *{
+            box-sizing: border-box;
+            margin: 50;
+            padding: 0;
+        }.parent{
+            margin-top: 50px;
+    height: 500px;
+    display: flex ;
+    flex-direction:row ;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: flex-start;
+
+  }
+  .Box{
+    margin: 40;
+    text-align: center;
+    box-shadow: 2px 2px 2px 2px gray;
+    height: 470px;
+    width: 300px;
+  }
+  .Box button{
+    color: #ffffff;
+    background-color: green;
+    padding: 6px;
+    
+
+  }
+
+
+    </style>
+</head>
+<body>
+    
+        <div class="parent">
+            <div class="Box" id="Box-1"><h1>Basic</h1>
+            <p>$10/ month</p><br>
+            <p>Feature 1</p><br>
+            <p>Feature 2</p><br>
+            <button>Sign in</button>
+            
+            </div>
+            <div class="Box" id="Box-2"><h1>Premium</h1>
+                <p>$30/ month</p><br>
+                <p>Feature 1</p><br>
+                <p>Feature 2</p><br>
+                <p>Feature 3</p><br>
+                <button>Sign in</button>
+            </div>
+            <div class="Box" id="Box-3"><h1>Pro</h1>
+                <p>$50/ month</p><br>
+            <p>Feature 1</p><br>
+            <p>Feature 2</p><br>
+            <p>Feature 3</p><br>
+            <p>Feature 4</p><br>
+            <button>Sign in</button>
+            </div>
+
+            <h1>hello</h1>
+        </div>
+</body>
+</html>
