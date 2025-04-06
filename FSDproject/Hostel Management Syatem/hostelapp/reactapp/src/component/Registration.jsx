@@ -1,51 +1,71 @@
-import React from 'react'
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-// Put any other imports below so that CSS from your
-// components takes precedence over default styles. 
+import './Registration.css'; // Make sure to import your CSS file
+
 function Registration() {
+    const [userType, setUserType] = useState('student'); // State to hold the user type
 
-    function sendData(e){
-    e.preventDefault();
-    const name=e.target.name.value;
-    const email=e.target.email.value;
-    const password=e.target.password.value;
-    alert(name+email+password);
+    async function sendData(e) {
+        e.preventDefault();
+        const name = e.target.name.value;
+        const email = e.target.email.value;
+        const password = e.target.password.value;
 
-        fetch("http://localhost:3005/register",{
+        const response = await fetch("http://localhost:3005/register", {
             method: "POST",
-            body:{},
-            headers:{'Content-Type':'application/json'}
-
-        })
+            body: JSON.stringify({ name, email, password, userType }), // Include userType in the request
+            headers: { 'Content-Type': 'application/json' }
+        });
+        const res = await response.json();
+        alert(res.msg);
     }
-  return (
 
-
-
-
-
-    <div><h2 style={{backgroundColor:'magenta'}}>Registration</h2>  
-    <div>
-    <form onSubmit={sendData}> 
-    <div class="form-group">
-    <label for="name">Name</label>
-    <input type="text"  name="name" required class="form-control" id="exampleInputEmail1" aria-describedby="nameHelp" placeholder="Enter name"></input>
-  </div>
-
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" name="email" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"></input>
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div> 
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" name = "password" required class="form-control" id="exampleInputPassword1" placeholder="Password"></input>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-    </div>
-    </div>
-  )
+    return (
+        <div className="registration-wrapper"> {/* Wrapper for the registration form */}
+            <div className="registration-container"> {/* Container for styling */}
+                <h2 id="registrationHeading">Registration</h2>
+                <form onSubmit={sendData}>
+                    <div className="form-group">
+                        <label>User Type:</label>
+                        <div>
+                            <label>
+                                <input
+                                    type="radio"
+                                    value="student"
+                                    checked={userType === 'student'}
+                                    onChange={() => setUserType('student')}
+                                />
+                                Student
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    value="administrator"
+                                    checked={userType === 'administrator'}
+                                    onChange={() => setUserType('administrator')}
+                                />
+                                Administrator
+                            </label>
+                        </div>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="exampleInputname">Name</label>
+                        <input type="text" name="name" required className="form-control" id="exampleInputname" placeholder="Enter name" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="exampleInputEmail1">Email address</label>
+                        <input type="email" name="email" required className="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                        <small id="emailHelp" className="form-text text-muted"></small>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="exampleInputPassword1">Password</label>
+                        <input type="password" name="password" required className="form-control" id="exampleInputPassword1" placeholder="Password" />
+                    </div>
+                    <button type="submit" className="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    );
 }
 
-export default Registration
+export default Registration;

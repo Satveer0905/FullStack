@@ -1,0 +1,98 @@
+/* Home.css */
+
+body {
+    background-color: #f0f4f8; /* Light background color */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #homeHeading{
+    text-align: center;
+    color: white; /* White text color */
+    padding: 20px;
+    background-color: rgb(243, 16, 243); /* Background color for the heading */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  nav {
+    text-align: center; /* Center the navigation */
+    margin: 20px 0; /* Margin for spacing */
+  }
+  
+  ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+  }
+  
+  li {
+    display: inline; /* Display list items inline */
+    margin: 0 15px; /* Space between links */
+  }
+  
+  a {
+    text-decoration: none; /* Remove underline from links */
+    color: #00796b; /* Link color */
+    font-weight: bold; /* Bold links */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  .sign-in-button {
+    display: block; /* Block display for the button */
+    margin: 20px auto; /* Center the button */
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #00796b; /* Button color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1em; /* Font size for button */
+    transition: background-color 0.3s; /* Smooth transition */
+  }
+  
+  .sign-in-button:hover {
+    background-color: #005b4f; /* Darker shade on hover */
+  }
+  
+  /* Prompt styles */
+  .prompt {
+    position: fixed; /* Fixed position for the prompt */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .prompt-content {
+    background: white; /* White background for the prompt */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-align: center; /* Centered text */
+  }
+  
+  .prompt-content h3 {
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  
+  .prompt-content button {
+    margin: 5px; /* Space between buttons */
+    padding: 10px 15px; /* Padding for buttons */
+    background-color: #00796b; /* Button color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+  }
+  
+  .prompt-content button:hover {
+    background-color: #005b4f; /* Darker shade on hover */
+  }
