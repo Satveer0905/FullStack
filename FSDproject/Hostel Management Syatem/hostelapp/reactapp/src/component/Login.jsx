@@ -5,29 +5,35 @@ import './Login.css';
 function Login() {
   const navigate = useNavigate();
   const [role, setRole] = useState('student'); // Default role
+  const [loading, setLoading] = useState(false); // Loading state
+  const [error, setError] = useState(''); // Error message state
 
-  // Make the sendData function asynchronous
   async function sendData(e) {
     e.preventDefault();
+    setLoading(true); // Set loading to true
+    setError(''); // Reset error message
+
     const email = e.target.email.value;
     const password = e.target.password.value;
 
     const response = await fetch("http://localhost:3005/login", {
       method: "POST",
-      body: JSON.stringify({ email, password, role }), // Include role in the request
+      body: JSON.stringify({ email, password, role }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     const res = await response.json();
-    // Handle response (optional, like storing the token or redirecting)
-    alert(res.msg);
+    setLoading(false); // Set loading to false
+
     if (res.msg === "success") {
-      navigate(role === 'administrator' ? "/admin-dashboard" : "/student-dashboard");
+      navigate(role === 'administrator' ? "/AdminDashboard" : "/StudentDashboard");
+    } else {
+      setError(res.msg); // Set error message if login fails
     }
   }
 
   return (
-    <div className="login-container"> {/* Add a specific class here */}
+    <div className="login-container">
       <h2 id="loginHeading">Login</h2>
       <form onSubmit={sendData}>
         <div className="form-group">
@@ -50,11 +56,8 @@ function Login() {
             required
             className="form-control"
             id="email"
-            aria-describedby="emailHelp"
             placeholder="Enter email"
           />
-          <small id="emailHelp" className="form-text text-muted">
-          </small>
         </div>
         <div className="form-group">
           <label htmlFor="password">Password</label>
@@ -67,7 +70,10 @@ function Login() {
             placeholder="Password"
           />
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
+        {error && <div className="alert alert-danger">{error}</div>} {/* Display error message */}
+        <button type="submit" className="btn btn-primary" disabled={loading}>
+          {loading ? 'Logging in...' : 'Submit'} {/* Show loading text */}
+        </button>
       </form>
     </div>
   );
