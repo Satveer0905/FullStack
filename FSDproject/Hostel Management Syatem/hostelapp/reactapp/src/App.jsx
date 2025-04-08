@@ -4,7 +4,8 @@ import './App.css';
 import Registration from './component/Registration';
 import Login from './component/Login';
 import Home from './component/Home'; 
-import Dashboard from './component/Dashboard';
+import AdminDashboard from './component/AdminDashboard';
+import StudentDashboard from './component/StudentDashboard';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,7 +19,8 @@ function App() {
           <Route path='/register' element={<Registration />} />
         </Route>
         {/* Dashboard as a separate page */}
-        <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/AdminDashboard' element={<AdminDashboard />} />
+        <Route path='/StudentDashboard' element={<StudentDashboard />} />
       </Routes>
     </BrowserRouter>
   );

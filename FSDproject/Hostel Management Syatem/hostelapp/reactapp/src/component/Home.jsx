@@ -15,19 +15,7 @@ function Home() {
 
   return (
     <div>
-      <div>
-        <h2 id="homeHeading">Home</h2>
-      </div>
-      {/* <nav>
-        <ul>
-          <li>
-            <Link to="/login">Login</Link>
-          </li>
-          <li>
-            <Link to="/register">Register</Link>
-          </li>
-        </ul>
-      </nav> */}
+      <h2 id="homeHeading">Home</h2>
       <button className="sign-in-button" onClick={handleSignInClick}>
         Sign In
       </button>

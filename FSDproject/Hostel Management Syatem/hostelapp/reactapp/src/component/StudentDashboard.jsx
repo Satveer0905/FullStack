@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 function StudentDashboard() {
   return (
-    <div>StudentDashboard</div>
-  )
+    <div>Student Dashboard</div>
+  );
 }
 
-export default StudentDashboard
+export default StudentDashboard;
