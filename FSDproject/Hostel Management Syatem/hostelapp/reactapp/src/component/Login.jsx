@@ -25,8 +25,8 @@ function Login() {
     const res = await response.json();
     setLoading(false); // Set loading to false
 
-    if (res.msg === "success") {
-      navigate(role === 'administrator' ? "/AdminDashboard" : "/StudentDashboard");
+    if (res.msg == "success") {
+      navigate(role == 'administrator' ? "/AdminDashboard" : "/StudentDashboard");
     } else {
       setError(res.msg); // Set error message if login fails
     }
