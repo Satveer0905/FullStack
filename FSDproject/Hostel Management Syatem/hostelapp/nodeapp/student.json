@@ -1,1 +1,8 @@
-[{"name":"Satvee","email":"abc.2mail.com","password":"123456789"},{"name":"Sat","email":"ac.2mail.com","password":"123456789"},{"name":"Sat","email":"abcd.2mail.com","password":"123456789"}]
+[
+  {
+    "name": "satveer",
+    "email": "abc@gmail.com",
+    "password": "1234",
+    "userType": "administrator"
+  }
+]
