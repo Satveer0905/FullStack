@@ -1,11 +1,21 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './AdminDashboard.css'; // Import the CSS file
 
 function AdminDashboard() {
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleLogout = () => {
+    // Logic for logging out (e.g., clearing tokens, redirecting)
+    alert("You have been logged out.");
+    navigate("/"); // Redirect to login page
+  };
+
   return (
     <div className="admin-dashboard">
       <header className="dashboard-header">
         <h1>Hostel Management System</h1>
+        <button className="logout-button" onClick={handleLogout}>Logout</button>
         <nav className="dashboard-nav">
           <ul>
             <li>Dashboard</li>

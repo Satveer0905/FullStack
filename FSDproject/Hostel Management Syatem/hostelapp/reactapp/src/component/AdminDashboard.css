@@ -1,53 +1,63 @@
-/* AdminDashboard.css */
-
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4; /* Light background for the entire page */
-}
-
 .admin-dashboard {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-.dashboard-header {
+.admin-dashboard .dashboard-header {
     background-color: #00796b; /* Dark teal background */
     color: white;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    position: relative; /* Position relative for absolute positioning of logout button */
 }
 
-.dashboard-nav {
+.admin-dashboard .logout-button {
+    position: absolute; /* Position the button in the top right corner */
+    top: 20px;
+    right: 20px;
+    background-color: #d32f2f; /* Red background for logout button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.admin-dashboard .logout-button:hover {
+    background-color: #b71c1c; /* Darker red on hover */
+}
+
+.admin-dashboard .dashboard-nav {
     margin-top: 10px;
 }
 
-.dashboard-nav ul {
+.admin-dashboard .dashboard-nav ul {
     list-style: none;
     padding: 0;
 }
 
-.dashboard-nav li {
+.admin-dashboard .dashboard-nav li {
     display: inline;
     margin: 0 15px;
     cursor: pointer;
     transition: color 0.3s;
 }
 
-.dashboard-nav li:hover {
+.admin-dashboard .dashboard-nav li:hover {
     color: #004d40; /* Darker shade on hover */
 }
 
-.dashboard-content {
+.admin-dashboard .dashboard-content {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
     margin-top: 20px;
 }
 
-.card {
+.admin-dashboard .card {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -55,26 +65,26 @@ body {
     transition: transform 0.3s;
 }
 
-.card:hover {
+.admin-dashboard .card:hover {
     transform: translateY(-5px); /* Lift effect on hover */
 }
 
-.card h2 {
+.admin-dashboard .card h2 {
     margin: 0 0 10px;
     color: #00796b; /* Teal color for headings */
 }
 
-.card p {
+.admin-dashboard .card p {
     font-size: 2em;
     color: #333; /* Darker text for values */
 }
 
-.card ul {
+.admin-dashboard .card ul {
     padding: 0;
     list-style: none;
 }
 
-.card ul li {
+.admin-dashboard .card ul li {
     margin: 5px 0;
     color: #555; /* Slightly lighter text for list items */
 }

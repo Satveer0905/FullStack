@@ -12,16 +12,18 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Routes>
-        {/* Home as the parent route */}
-        <Route path='/' element={<Home />}>
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Registration />} />
-        </Route>
-        {/* Dashboard as a separate page */}
-        <Route path='/AdminDashboard' element={<AdminDashboard />} />
-        <Route path='/StudentDashboard' element={<StudentDashboard />} />
-      </Routes>
+      <div className="app-container">
+        <Routes>
+          {/* Home as the parent route */}
+          <Route path='/' element={<Home />}>
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Registration />} />
+          </Route>
+          {/* Dashboard as a separate page */}
+          <Route path='/AdminDashboard' element={<AdminDashboard />} />
+          <Route path='/StudentDashboard' element={<StudentDashboard />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }

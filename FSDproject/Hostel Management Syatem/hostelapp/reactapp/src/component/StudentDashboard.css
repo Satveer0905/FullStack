@@ -1,0 +1,43 @@
+/* StudentDashboard.css */
+
+.student-dashboard__container {
+    padding: 20px;
+    background-color: #f0f8ff; /* Light background color */
+    min-height: 100vh; /* Full height */
+  }
+  
+  .student-dashboard__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #03f4fc; /* Header background color */
+    padding: 20px;
+    border-radius: 5px; /* Rounded corners */
+    color: white; /* White text color */
+  }
+  
+  .student-dashboard__content {
+    margin-top: 20px;
+  }
+  
+  .student-dashboard__info-card {
+    background-color: white; /* Card background color */
+    border: 1px solid #ccc; /* Card border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px;
+    margin-bottom: 20px; /* Space between cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  }
+  
+  .student-dashboard__heading {
+    color: #333; /* Dark text color */
+  }
+  
+  .student-dashboard__logout-btn {
+    background-color: #ff4d4d; /* Logout button color */
+    color: white; /* Button text color */
+  }
+  
+  .student-dashboard__logout-btn:hover {
+    background-color: #ff1a1a; /* Darker shade on hover */
+  }
