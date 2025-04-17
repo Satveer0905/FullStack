@@ -1,7 +1,13 @@
 [
+  
   {
     "name": "satveer",
-    "email": "abcd.@Gmail.com",
+    "email": "abcd@gmail.com",
+    "password": "1234"
+  },
+  {
+    "name": "satveer",
+    "email": "ab@gmail.com",
     "password": "1234"
   }
 ]
